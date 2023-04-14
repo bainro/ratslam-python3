@@ -70,7 +70,7 @@ class VisualOdometry(object):
         self.old_vtrans_template = template
 
         # VROT
-        subimg = img[IMAGE_VROT_Y_RANGE, IMAGE_ODO_X_RANGE]
+        subimg = img
         template = self._create_template(subimg)
 
         offset, diff = compare_segments(
