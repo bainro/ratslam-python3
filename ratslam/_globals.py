@@ -76,36 +76,6 @@ def create_pc_weights(dim, var):
     weight = weight/np.sum(weight)
     return weight
 
-# @profile
-def compare_segments(seg1, seg2, slen):
-    cwl = seg1.size
-
-    mindiff = 1e10
-    minoffset = 0
-
-    diffs = np.zeros(slen)
-
-    for offset in range(slen+1):
-        e = (cwl-offset)
-
-        print(seg1[offset:cwl].shape)
-        i = seg1[offset:cwl] - seg2[:e]
-        cdiff = np.abs(i)
-        cdiff = np.sum(cdiff)/e
-
-        if cdiff < mindiff:
-            mindiff = cdiff
-            minoffset = offset
-
-        cdiff = np.abs(seg1[:e] - seg2[offset:cwl])
-        cdiff = np.sum(cdiff)/e
-
-        if cdiff < mindiff:
-            mindiff = cdiff
-            minoffset = -offset
-
-    return minoffset, mindiff
-
 # CONSTANTS AND ALGORITHM PARAMETERS ==========================================
 # NOTE: it is need a refactoring to set these variables as a model parameter
 PC_VT_INJECT_ENERGY     = 0.1
