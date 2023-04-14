@@ -45,7 +45,7 @@ import ratslam
 
 if __name__ == '__main__':
     # Change this line to open other movies
-    data = r'D:\Bkp\ratslam\data\stlucia_testloop.avi'
+    data = f'./test.mp4'
 
     video = cv2.VideoCapture(data)
     slam = ratslam.Ratslam()
@@ -121,7 +121,7 @@ if __name__ == '__main__':
         plot.pause(0.1)
         # ==========================================================
 
-    print 'DONE!'
-    print 'n_ templates:', len(slam.view_cells.cells)
-    print 'n_ experiences:', len(slam.experience_map.exps)
+    print('DONE!')
+    print('n_ templates:', len(slam.view_cells.cells))
+    print('n_ experiences:', len(slam.experience_map.exps))
     plot.show()
