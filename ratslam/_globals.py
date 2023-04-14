@@ -88,6 +88,7 @@ def compare_segments(seg1, seg2, slen):
     for offset in range(slen+1):
         e = (cwl-offset)
 
+        print(seg1[offset:cwl].shape)
         i = seg1[offset:cwl] - seg2[:e]
         cdiff = np.abs(i)
         cdiff = np.sum(cdiff)/e
