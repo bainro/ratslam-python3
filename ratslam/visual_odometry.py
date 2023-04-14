@@ -32,8 +32,8 @@ class VisualOdometry(object):
 
     def __init__(self):
         '''Initializes the visual odometry module.'''
-        self.old_vtrans_template = np.zeros(IMAGE_ODO_X_RANGE.stop)
-        self.old_vrot_template = np.zeros(IMAGE_ODO_X_RANGE.stop)
+        self.old_vtrans_template = np.zeros(IMAGE_ODO_X_RANGE[-1])
+        self.old_vrot_template = np.zeros(IMAGE_ODO_X_RANGE[-1])
         self.odometry = [0., 0., np.pi/2]
 
     def _create_template(self, subimg):
