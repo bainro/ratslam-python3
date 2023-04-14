@@ -35,7 +35,7 @@ class PoseCells(object):
         '''Initializes the Pose Cell module.'''
 
         self.cells = np.zeros([PC_DIM_XY, PC_DIM_XY, PC_DIM_TH])
-        self.active = a, b, c = [PC_DIM_XY/2, PC_DIM_XY/2, PC_DIM_TH/2]
+        self.active = a, b, c = [PC_DIM_XY//2, PC_DIM_XY//2, PC_DIM_TH//2]
         self.cells[a, b, c] = 1
 
     def compute_activity_matrix(self, xywrap, thwrap, wdim, pcw): 
