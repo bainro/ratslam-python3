@@ -54,7 +54,7 @@ class VisualOdometry(object):
                  frame as a 2D tuple of floats.
         '''
         print("hi " + str(img.shape))
-        subimg = img
+        subimg = img[:,:1080]
         template = self._create_template(subimg)
 
         # VTRANS
