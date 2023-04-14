@@ -154,7 +154,7 @@ class PoseCells(object):
         # Path Integration
         # vtrans affects xy direction
         # shift in each th given by the th
-        for dir_pc in xrange(PC_DIM_TH): 
+        for dir_pc in range(PC_DIM_TH): 
             direction = np.float64(dir_pc-1) * PC_C_SIZE_TH
             # N,E,S,W are straightforward
             if (direction == 0):
