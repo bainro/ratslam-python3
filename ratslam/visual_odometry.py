@@ -53,6 +53,7 @@ class VisualOdometry(object):
         :return: the deslocation and rotation of the image from the previous 
                  frame as a 2D tuple of floats.
         '''
+        print("hi " + type(img))
         subimg = img
         template = self._create_template(subimg)
 
