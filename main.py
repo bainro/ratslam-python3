@@ -93,10 +93,10 @@ if __name__ == '__main__':
         plot.title('POSE CELL ACTIVATION')
         x, y, th = slam.pc
         ax.plot(x, y, 'x')
-        ax.plot3D([0, 60], [y[-1], y[-1]], [th[-1], th[-1]], 'K')
-        ax.plot3D([x[-1], x[-1]], [0, 60], [th[-1], th[-1]], 'K')
-        ax.plot3D([x[-1], x[-1]], [y[-1], y[-1]], [0, 36], 'K')
-        ax.plot3D([x[-1]], [y[-1]], [th[-1]], 'mo')
+        ax.plot3D([0, 60], [y[-1], y[-1]], [th[-1], th[-1]])
+        ax.plot3D([x[-1], x[-1]], [0, 60], [th[-1], th[-1]])
+        ax.plot3D([x[-1], x[-1]], [y[-1], y[-1]], [0, 36])
+        ax.plot3D([x[-1]], [y[-1]], [th[-1]])
         ax.grid()
         ax.axis([0, 60, 0, 60]);
         ax.set_zlim(0, 36)
