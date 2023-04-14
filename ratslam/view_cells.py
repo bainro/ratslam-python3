@@ -71,7 +71,7 @@ class ViewCells(object):
         :param subimg: a sub-image as a 2D numpy array.
         :return: the view template as a 1D numpy array.
         '''
-        subimg = img[IMAGE_VT_Y_RANGE, IMAGE_VT_X_RANGE]
+        subimg = img[IMAGE_VT_Y_RANGE[0]:IMAGE_VT_Y_RANGE[1], IMAGE_VT_X_RANGE[0]:IMAGE_VT_X_RANGE[1]]
         x_sums = np.sum(subimg, 0)
         return x_sums/np.sum(x_sums, dtype=np.float32)
 
