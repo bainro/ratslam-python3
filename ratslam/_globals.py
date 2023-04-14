@@ -67,7 +67,7 @@ def create_pc_weights(dim, var):
     dim_center = int(np.floor(dim/2.))
     
     weight = np.zeros([dim, dim, dim])
-    for x, y, z in itertools.product(xrange(dim), xrange(dim), xrange(dim)):
+    for x, y, z in itertools.product(range(dim), range(dim), range(dim)):
         dx = -(x-dim_center)**2
         dy = -(y-dim_center)**2
         dz = -(z-dim_center)**2
@@ -85,7 +85,7 @@ def compare_segments(seg1, seg2, slen):
 
     diffs = np.zeros(slen)
 
-    for offset in xrange(slen+1):
+    for offset in range(slen+1):
         e = (cwl-offset)
 
         cdiff = np.abs(seg1[offset:cwl] - seg2[:e])
