@@ -10,6 +10,6 @@ implementation.
 Dependences
 -----------
 
-The only dependence for this package is Numpy [3]_, thus it does not handle how
+The only dependence for this package is Numpy, thus it does not handle how
 to open and manage the movie and image files. For this, I strongly recommend 
-the use of OpenCV [4]_.
+the use of OpenCV.
