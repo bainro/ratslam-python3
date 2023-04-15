@@ -3,8 +3,8 @@ RATSLAM (PYTHON VERSION)
 ========================
 
 This is a full Ratslam implementation in python. This implementation is based 
-on Milford's original implementation [1]_ in matlab, and Christine Lee's python 
-implementation [2]_. The original data movies can also be found in [1]_.
+on Milford's original implementation in matlab, and Christine Lee's python 
+implementation.
 
 
 Dependences
