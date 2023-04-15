@@ -1,6 +1,4 @@
-========================
-RATSLAM (PYTHON VERSION)
-========================
+###RATSLAM (PYTHON VERSION)
 
 This is a full Ratslam implementation in python. This implementation is based 
 on Milford's original implementation in matlab, and Christine Lee's python 
